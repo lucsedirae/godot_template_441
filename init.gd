@@ -1,9 +1,11 @@
 extends Node
 
 const PATH_MODULES = "res://Modules/"
+var TestRunner = preload("res://Util/tests/TestRunner.gd")
 
 func _ready() -> void:
 	var modules = get_modules(PATH_MODULES);
+	TestRunner.run()
 	
 
 func get_modules(path: String) -> Array:
@@ -25,9 +27,3 @@ func get_modules(path: String) -> Array:
 	dir.list_dir_end()
 	return files
 	
-
-func test():
-		pass
-# Example usage:
-# var init_files = scan_init_files("res://scripts/")
-# print(init_files)  # Outputs: ["init_player.gd", "init_enemy.gd", etc.]

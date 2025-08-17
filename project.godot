@@ -19,6 +19,7 @@ markdown_book/docs_folder="res://Docs"
 [application]
 
 config/name="GD_template"
+run/main_scene="uid://cjadmnbijxvfm"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
