@@ -3,12 +3,13 @@ extends Node
 const PATH_TESTS = "res://Util/tests/"
 
 static func run() -> void:
+	print("Initializing tests...")
 	var test_files = get_tests(PATH_TESTS)
 	var test_instances = instantiate_tests(test_files)
 	
 	# Run tests on each instance
 	for test_instance in test_instances:
-		run_test_methods(test_instance)
+		test_instance.run()
 
 static func instantiate_tests(test_filenames: Array) -> Array:
 	var instances = []
@@ -29,7 +30,6 @@ static func instantiate_tests(test_filenames: Array) -> Array:
 			continue
 		
 		instances.append(instance)
-		print("Instantiated test: ", filename)
 	
 	return instances
 
