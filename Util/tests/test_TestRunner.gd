@@ -6,6 +6,7 @@ var filename = "test_TestRunner.gd"
 
 const TEST_COUNT = 1
 
+# Run test
 func run():
 	print("Initializing test: ", filename)
 	test_get_filenames()
