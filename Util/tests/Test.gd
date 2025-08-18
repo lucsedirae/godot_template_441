@@ -2,12 +2,8 @@
 class_name Test
 extends Node
 
-func assert_count(actual, expected):
+func assert_equals(actual, expected):
 	if (actual == expected):
-		print("Asserted actual equals expected\n")
-		print("Actual: ", actual)
-		print("Expected: ", expected)
+		return true
 	else:
-		push_error("ERROR: Actual does not equal expected")
-		print("Actual: ", actual)
-		print("Expected: ", expected)
+		return false
