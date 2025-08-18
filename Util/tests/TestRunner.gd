@@ -2,19 +2,20 @@ extends Node
 
 const PATH_TESTS = "res://Util/tests/"
 
+# Run executes all tests
 static func run() -> void:
 	print("Initializing tests...")
-	var test_files = get_tests(PATH_TESTS)
-	var test_instances = instantiate_tests(test_files)
+	var tests = load_tests()
 	
-	# Run tests on each instance
-	for test_instance in test_instances:
-		test_instance.run()
+	for test in tests:
+		test.run()
 
-static func instantiate_tests(test_filenames: Array) -> Array:
+# Get test files and instantiates each as a test
+static func load_tests() -> Array:
+	var test_files = get_filenames(PATH_TESTS)
 	var instances = []
 	
-	for filename in test_filenames:
+	for filename in test_files:
 		var full_path = PATH_TESTS + filename
 		
 		# Load the script
@@ -33,18 +34,8 @@ static func instantiate_tests(test_filenames: Array) -> Array:
 	
 	return instances
 
-static func run_test_methods(test_instance) -> void:
-	# Get all methods from the test instance
-	var methods = test_instance.get_method_list()
-	
-	# Run methods that start with "test_"
-	for method_info in methods:
-		var method_name = method_info["name"]
-		if method_name.begins_with("test_"):
-			print("Running test method: ", method_name)
-			test_instance.call(method_name)
-
-static func get_tests(path = null) -> Array:
+# Get filenames of tests in test path
+static func get_filenames(path = null) -> Array:
 	path = path if path != null else PATH_TESTS
 	
 	var files = []
