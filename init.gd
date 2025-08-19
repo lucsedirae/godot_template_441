@@ -9,7 +9,3 @@ func _ready() -> void:
 	
 	# Load modules required for game initialization
 	var config_module = module_manager.load_module("config")
-	if config_module is Node:
-		print('SUCCESS')
-	else:
-		print('FAIL')
