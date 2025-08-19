@@ -14,7 +14,6 @@ func run():
 func test_get_module_filenames():
 	print("test_get_module_filenames:")
 	var files = ModuleManager.get_module_filenames()
-	# print(files)
 	var passing = super.assert_equals(files.size(), MODULE_COUNT)
 	if passing:
 		print("\nAsserted actual test file count equals expected")

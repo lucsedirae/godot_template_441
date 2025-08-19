@@ -5,7 +5,24 @@ extends Node
 const PATH_MODULES = "res://Modules/"
 
 func _ready() -> void:
-	var modules = get_module_filenames()
+	var modules_dict = get_modules_dict()
+
+static func debug():
+	var modules_dict = get_modules_dict()
+
+static func get_modules_dict() -> Dictionary:
+	var filenames = get_module_filenames()
+	var modules = {}
+	
+	for relative_path in filenames:
+		var filename = relative_path.get_file()  # Get just the filename
+		var module_name = filename.trim_prefix("init_").trim_suffix(".gd")
+		var full_path = PATH_MODULES + relative_path
+		modules[module_name] = full_path
+	
+	print(modules)
+	return modules
+
 
 static func get_module_filenames(path: String = PATH_MODULES) -> Array:
 	return _find_init_files(path)
