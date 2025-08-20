@@ -1,7 +1,8 @@
 extends Node
 
 const PATH_SCENES = "res://Scenes/"
-static var scenes_dict = null
+var scenes_dict = null
+var current = null
 
 func _ready() -> void:
 	print("Scene manager loaded")
@@ -40,6 +41,8 @@ func load_scene(scene_name: String, parent_node: Node = null) -> Node:
 	instance.name = scene_name + "_scene"
 	print("Scene loaded and added: ", scene_name)
 	
+	current = scene_name
+	
 	return instance
 
 func get_scenes_dict() -> Dictionary:
@@ -72,3 +75,8 @@ func get_scene_filenames():
 	
 	dir.list_dir_end()
 	return files
+
+func get_current() -> Variant:
+	if current != null and current != "":
+		return current
+	return null
