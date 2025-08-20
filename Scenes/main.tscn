@@ -2,7 +2,7 @@
 
 [ext_resource type="PlaneMesh" uid="uid://d2l5s17h6i0ff" path="res://Assets/meshes/level_floor.tres" id="1_jjgbg"]
 [ext_resource type="PackedScene" uid="uid://cectpwuvntg50" path="res://Scenes/player.tscn" id="2_bo1nx"]
-[ext_resource type="PackedScene" uid="uid://dyka1me0qym52" path="res://Scenes/walls.tscn" id="3_8gbba"]
+[ext_resource type="PackedScene" uid="uid://dyka1me0qym52" path="res://Scenes/wall.tscn" id="3_8gbba"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jjgbg"]
 size = Vector3(2, 1, 2)
@@ -29,5 +29,5 @@ shape = SubResource("BoxShape3D_jjgbg")
 [node name="Player" parent="." instance=ExtResource("2_bo1nx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 8.25)
 
-[node name="Walls" parent="." instance=ExtResource("3_8gbba")]
+[node name="Wall" parent="." instance=ExtResource("3_8gbba")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)

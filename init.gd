@@ -10,5 +10,7 @@ func _ready() -> void:
 	var config_module = module_manager.load_module("config", self)
 	var ui_module = module_manager.load_module("ui", self)
 	var scene_manager = module_manager.load_module("scene_management", self)
+	var movement_module = module_manager.load_module("movement", self)
 
+	movement_module.setup_wasd_controls()
 	scene_manager.load_scene("main")
