@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cectpwuvntg50"]
+
+[ext_resource type="CapsuleMesh" uid="uid://dbymm5bisrt1m" path="res://Assets/meshes/player_placeholder.tres" id="1_v0iea"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_cvnsp"]
+
+[node name="Player" type="Node3D"]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+shape = SubResource("CapsuleShape3D_cvnsp")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
+mesh = ExtResource("1_v0iea")
