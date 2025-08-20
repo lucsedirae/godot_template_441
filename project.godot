@@ -8,8 +8,21 @@
 
 config_version=5
 
+[GDScript_Formatter]
+
+format_on_save=true
+
+[addons]
+
+markdown_book/docs_folder="res://Docs"
+
 [application]
 
 config/name="GD_template"
+run/main_scene="uid://cjadmnbijxvfm"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[editor_plugins]
+
+enabled=PackedStringArray()
