@@ -1,7 +1,7 @@
 # TestRunner unit test
 extends Test
 
-var ModuleManager = preload("res://Modules/ModuleManager.gd")
+var ModuleManagerClass = preload("res://Modules/ModuleManager.gd")
 var module_manager = null
 var filename = "test_ModuleManager.gd"
 
@@ -9,7 +9,7 @@ var filename = "test_ModuleManager.gd"
 const MODULE_COUNT = 6
 
 func _init() -> void:
-	module_manager = ModuleManager.new()
+	module_manager = ModuleManagerClass.new()
 
 # Run test
 func run():
