@@ -1,33 +1,23 @@
-[gd_scene load_steps=5 format=3 uid="uid://cn80k70as47hm"]
+[gd_scene load_steps=4 format=3 uid="uid://cn80k70as47hm"]
 
-[ext_resource type="PlaneMesh" uid="uid://d2l5s17h6i0ff" path="res://Assets/meshes/level_floor.tres" id="1_jjgbg"]
 [ext_resource type="PackedScene" uid="uid://cectpwuvntg50" path="res://Scenes/player.tscn" id="2_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://dyka1me0qym52" path="res://Scenes/wall.tscn" id="3_8gbba"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_jjgbg"]
-size = Vector3(2, 1, 2)
+[ext_resource type="PackedScene" uid="uid://svqgok8fqb8q" path="res://Scenes/floor.tscn" id="3_jjvhh"]
 
 [node name="Node3D" type="Node3D"]
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.96117, 0.275956, 0, -0.275956, 0.96117, 0, 3.78948, 12.64)
+transform = Transform3D(1, 0, 0, 0, 0.574548, 0.818471, 0, -0.818471, 0.574548, 0, 15.0075, 12.64)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.290485, 0.95688, 0, -0.95688, 0.290485, 0, 16.4246, 3.20356)
 light_energy = 0.75
-
-[node name="Floor" type="StaticBody3D" parent="."]
-transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 0, 0, 0)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
-mesh = ExtResource("1_jjgbg")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
-shape = SubResource("BoxShape3D_jjgbg")
 
 [node name="Player" parent="." instance=ExtResource("2_bo1nx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 8.25)
 
 [node name="Wall" parent="." instance=ExtResource("3_8gbba")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
+
+[node name="Floor" parent="." instance=ExtResource("3_jjvhh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
