@@ -8,7 +8,8 @@ static func setup_wasd_controls():
 		"move_up": KEY_W,
 		"move_left": KEY_A,
 		"move_down": KEY_S,
-		"move_right": KEY_D
+		"move_right": KEY_D,
+		"ui_accept": KEY_SPACE
 	}
 	
 	# Add each action and bind the corresponding key

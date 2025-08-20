@@ -10,10 +10,8 @@ var config = ConfigFile.new()
 
 func _ready() -> void:
 	print("Config manager loaded")
-	#TODO: Add a load_config() function that looks for an existing saved config file 
-	#TODO: and loads that before loading default
-	set_default_config()
-	config.save(PATH_SAVEDATA)
+	
 
 func set_default_config():
 	config.set_value(SECTION_DEVTOOLS, SETTING_DEBUGGING, VALUE_STANDARD)
+	config.save(PATH_SAVEDATA)

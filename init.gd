@@ -12,5 +12,8 @@ func _ready() -> void:
 	var scene_manager = module_manager.load_module("scene_management", self)
 	var movement_module = module_manager.load_module("movement", self)
 
+	#TODO: Add a load_config() function that looks for an existing saved config file 
+	#TODO: and loads that before loading default
+	config_module.set_default_config()
 	movement_module.setup_wasd_controls()
 	scene_manager.load_scene("main")
