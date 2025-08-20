@@ -54,7 +54,8 @@ func load_module(module_name: String, parent_node: Node = null) -> Node:
 	if modules_dict == null:
 		modules_dict = get_modules_dict()
 	
-	print("Available modules: ", modules_dict.keys())
+	# TODO: Hide this debugging behind a config flag
+	#print("Available modules: ", modules_dict.keys())
 	print("Looking for module: ", module_name)
 	
 	# Check if module exists

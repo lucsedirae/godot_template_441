@@ -9,3 +9,6 @@ func _ready() -> void:
 	# Load modules required for game initialization - pass 'self' as parent
 	var config_module = module_manager.load_module("config", self)
 	var ui_module = module_manager.load_module("ui", self)
+	var scene_manager = module_manager.load_module("scene_management", self)
+
+	scene_manager.load_scene("main")

@@ -1,3 +1,23 @@
-[gd_scene format=3 uid="uid://cn80k70as47hm"]
+[gd_scene load_steps=3 format=3 uid="uid://cn80k70as47hm"]
+
+[ext_resource type="PlaneMesh" uid="uid://d2l5s17h6i0ff" path="res://Assets/meshes/level_floor.tres" id="1_jjgbg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jjgbg"]
+size = Vector3(2, 1, 2)
 
 [node name="Node3D" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.873517, 0.486793, 0, -0.486793, 0.873517, 0, 1.09378, 2.48148)
+
+[node name="Floor" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
+mesh = ExtResource("1_jjgbg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+shape = SubResource("BoxShape3D_jjgbg")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.193772, 0.981047, 0, -0.981047, 0.193772, 0, 1.65337, 1.21279)
