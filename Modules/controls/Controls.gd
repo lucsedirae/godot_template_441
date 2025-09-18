@@ -1,7 +1,7 @@
 # Modules/controls/Controls.gd
 extends Node
 
-@export var local_debugging: bool = true
+@export var local_debugging: bool = false
 
 ## Dictionary mapping action names to their corresponding key codes
 var movement_actions = {
@@ -12,6 +12,7 @@ var movement_actions = {
 		"ui_accept": KEY_SPACE,
 		"ui_main_menu": KEY_ESCAPE,
 		"dev_f1": KEY_F1,
+		"cycle_camera": KEY_TAB,
 	}
 
 ## Maps input controls to the Godot InputMap programmatically
