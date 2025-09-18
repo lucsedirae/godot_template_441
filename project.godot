@@ -23,6 +23,19 @@ run/main_scene="uid://cjadmnbijxvfm"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Config="*res://Modules/config/Config.gd"
+Debug="*res://Util/debug/Debug.gd"
+ControlsManager="*res://Modules/controls/Controls.gd"
+SceneManager="*res://Modules/scenes/SceneManager.gd"
+Lib="*res://Modules/lib.gd"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+
 [editor_plugins]
 
 enabled=PackedStringArray()

@@ -1,19 +1,10 @@
+# root/init.gd
 extends Node
-var TestRunner = preload("res://Util/tests/TestRunner.gd")
-var ModuleManagerClass = preload("res://Modules/ModuleManager.gd")
 
+## Scene identifier for the main game scene
+const SCENE_MAIN: String = "main"
+
+## Initializes the game on startup
 func _ready() -> void:
-	TestRunner.run()
-	var module_manager = ModuleManagerClass.new()
-	
-	# Load modules required for game initialization - pass 'self' as parent
-	var config_module = module_manager.load_module("config", self)
-	var ui_module = module_manager.load_module("ui", self)
-	var scene_manager = module_manager.load_module("scene_management", self)
-	var movement_module = module_manager.load_module("movement", self)
-
-	#TODO: Add a load_config() function that looks for an existing saved config file 
-	#TODO: and loads that before loading default
-	config_module.set_default_config()
-	movement_module.setup_wasd_controls()
-	scene_manager.load_scene("main")
+	ControlsManager.setup_wasd_controls()
+	SceneManager.load_scene(SCENE_MAIN)
