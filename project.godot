@@ -21,7 +21,22 @@ markdown_book/docs_folder="res://Docs"
 config/name="GD_template"
 run/main_scene="uid://cjadmnbijxvfm"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Assets/svg/icon.svg"
+
+[autoload]
+
+Lib="*res://Modules/lib.gd"
+Config="*res://Modules/config/Config.gd"
+ControlsManager="*res://Modules/controls/Controls.gd"
+Lang="*res://Modules/lang/Lang.gd"
+SceneManager="*res://Modules/scenes/SceneManager.gd"
+Debug="*res://Util/debug/Debug.gd"
+CameraManager="*res://Modules/camera/CameraManager.gd"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 
 [editor_plugins]
 

@@ -1,0 +1,6 @@
+[gd_resource type="CapsuleMesh" load_steps=2 format=3 uid="uid://dbymm5bisrt1m"]
+
+[ext_resource type="Material" uid="uid://bg7183k4ml3yk" path="res://Scenes/Player/player_material.tres" id="1_akm14"]
+
+[resource]
+material = ExtResource("1_akm14")
