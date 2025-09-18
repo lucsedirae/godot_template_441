@@ -5,7 +5,7 @@ const FILE_EXT_TRES: String = ".tres"
 const FILE_EXT_TSCN: String = ".tscn"
 const NODE_BUTTON: String = "Button"
 
-var local_debugging: bool = false
+var local_debugging: bool = true
 
 ## Determine if an object is garbage
 func is_garbage_object(body: RigidBody3D) -> bool:

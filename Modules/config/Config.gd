@@ -1,18 +1,26 @@
 # Modules/config/Config.gd
 extends Node
 
-const PATH_SETTINGS = "res://Modules/config/settings.json"
-const SETTING_RUN_TESTS: String = "setting_run_tests"
-const SETTING_TOGGLE_DEBUG: String = "setting_toggle_debug"
-const SETTING_EXIT: String = "setting_exit"
-const TYPE_CHECKBOX = "checkbox"
-const TYPE_BUTTON = "button"
+## Path to the settings configuration file
+const PATH_SETTINGS: String = "res://Modules/config/settings.json"
 
-var local_debugging = false
+## Setting key identifier for the debug mode toggle option
+const SETTING_TOGGLE_DEBUG: String = "setting_toggle_debug"
+
+## Setting key identifier for the exit/quit application option
+const SETTING_EXIT: String = "setting_exit"
+
+## UI element type constant for checkbox controls
+const TYPE_CHECKBOX: String = "checkbox"
+
+## UI element type constant for button controls
+const TYPE_BUTTON: String = "button"
+
+var local_debugging: bool = false
 var settings_data: Dictionary = {}
 
 ## Initializes the configuration manager
-func _ready():
+func _ready() -> void:
 	load_settings()
 
 ## Get a setting value
@@ -20,7 +28,7 @@ func _ready():
 ## @param key The setting key to retrieve
 ## @param default_value Value to return if key doesn't exist
 ## @return The setting value, or default_value if key not found
-func get_setting(key: String, default_value = null):
+func get_setting(key: String, default_value = null) -> Variant:
 	return settings_data.get(key, default_value)
 
 ## Set a setting value

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://svqgok8fqb8q"]
 
-[ext_resource type="PlaneMesh" uid="uid://d2l5s17h6i0ff" path="res://Assets/meshes/level_floor.tres" id="1_nvnu3"]
+[ext_resource type="PlaneMesh" uid="uid://d2l5s17h6i0ff" path="res://Scenes/Environment/Floor/level_floor.tres" id="1_nvnu3"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_agfsv"]
 size = Vector3(250, 0.1, 250)

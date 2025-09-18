@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dyka1me0qym52"]
 
-[ext_resource type="BoxMesh" uid="uid://gf2pock1s1v6" path="res://Assets/meshes/level_walls.tres" id="1_2bj67"]
+[ext_resource type="BoxMesh" uid="uid://gf2pock1s1v6" path="res://Scenes/Environment/Wall/level_walls.tres" id="1_2bj67"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2bj67"]
 size = Vector3(10, 5, 1)

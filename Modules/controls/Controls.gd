@@ -1,7 +1,7 @@
 # Modules/controls/Controls.gd
 extends Node
 
-@export var local_debugging: bool = false
+@export var local_debugging: bool = true
 
 ## Dictionary mapping action names to their corresponding key codes
 var movement_actions = {
