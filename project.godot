@@ -25,11 +25,12 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Config="*res://Modules/config/Config.gd"
-Debug="*res://Util/debug/Debug.gd"
-ControlsManager="*res://Modules/controls/Controls.gd"
-SceneManager="*res://Modules/scenes/SceneManager.gd"
 Lib="*res://Modules/lib.gd"
+Config="*res://Modules/config/Config.gd"
+ControlsManager="*res://Modules/controls/Controls.gd"
+Lang="*res://Modules/lang/Lang.gd"
+SceneManager="*res://Modules/scenes/SceneManager.gd"
+Debug="*res://Util/debug/Debug.gd"
 
 [display]
 
