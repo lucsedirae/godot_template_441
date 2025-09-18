@@ -15,7 +15,7 @@ var movement_actions = {
 	}
 
 ## Maps input controls to the Godot InputMap programmatically
-func setup_wasd_controls():
+func init_controls() -> void:
 	for action_name in movement_actions.keys():
 		var key_code = movement_actions[action_name]
 		

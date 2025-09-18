@@ -6,5 +6,5 @@ const SCENE_MAIN: String = "main"
 
 ## Initializes the game on startup
 func _ready() -> void:
-	ControlsManager.setup_wasd_controls()
+	ControlsManager.init_controls()
 	SceneManager.load_scene(SCENE_MAIN)
